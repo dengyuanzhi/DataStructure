@@ -142,6 +142,10 @@ public class Array<E> {
         }
         size--;
         data[size]=null;//loitering objects !=memory leak
+
+        if (size==data.length/4 && data.length/2!=0){
+            resize(data.length/2);
+        }
         return ret;
     }
 
@@ -192,7 +196,7 @@ public class Array<E> {
      * @param newCapacity
      */
     private void resize(int newCapacity) {
-        E newData[]= (E[]) new Objects[newCapacity];
+        E[] newData= (E[]) new Objects[newCapacity];
         for (int i = 0; i < size; i++) {
             newData[i]=data[i];
         }

@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args){
-        Array<Integer> array=new Array<Integer>();//泛型，包装类
+        Array<Integer> array=new Array<Integer>(20);//泛型，包装类
         for (int i = 0; i < 10; i++) {
             array.addLast(i);
             System.out.println(array);
@@ -13,14 +13,14 @@ public class Main {
         array.add(1,9);
         System.out.println(array);
 
-//        array.remove(2);
-//        System.out.println(array);
-//
-//        array.removeElement(4);
-//        System.out.println(array);
-//
-//        array.removeFirst();
-//        System.out.println(array);
+        array.remove(2);
+        System.out.println(array);
+
+        array.removeElement(4);
+        System.out.println(array);
+
+        array.removeFirst();
+        System.out.println(array);
 
     }
 }
